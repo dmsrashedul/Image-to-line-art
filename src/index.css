@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply antialiased text-slate-900 bg-slate-50;
+  }
+}
+
+@layer components {
+  input[type='range'] {
+    @apply appearance-none bg-transparent;
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    @apply appearance-none w-4 h-4 bg-indigo-600 rounded-full cursor-pointer border-2 border-white shadow-md transition-transform hover:scale-110 active:scale-95;
+    margin-top: -6px; /* Centers thumb on the track */
+  }
+  
+  input[type='range']::-webkit-slider-runnable-track {
+    @apply w-full h-1.5 bg-slate-200 rounded-full;
+  }
+
+  input[type='range']::-moz-range-thumb {
+    @apply w-4 h-4 bg-indigo-600 rounded-full cursor-pointer border-2 border-white shadow-md transition-transform hover:scale-110 active:scale-95 border-none;
+  }
+
+  input[type='range']::-moz-range-track {
+    @apply w-full h-1.5 bg-slate-200 rounded-full;
+  }
+}
